@@ -1,14 +1,14 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import BackgroundService from 'react-native-background-service';
-
+import { cancelAllAndroidTasks } from 'react-native-background-service';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
 
   React.useEffect(() => {
-    BackgroundService.multiply(3, 7).then(setResult);
+    cancelAllAndroidTasks();
+    setResult(15);
   }, []);
 
   return (

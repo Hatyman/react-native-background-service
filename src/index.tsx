@@ -1,9 +1,14 @@
-import { NativeModules } from 'react-native';
+export {
+  getAndroidBackgroundTaskCallback,
+  scheduleBackgroundProcessingIOSTask,
+  schedulePeriodicBackgroundProcessingIOSTask,
+  AndroidTaskExecutionCallback,
+  iOSTaskExecutionCallback,
+} from './background-handlers';
 
-type BackgroundServiceType = {
-  multiply(a: number, b: number): Promise<number>;
-};
-
-const { BackgroundService } = NativeModules;
-
-export default BackgroundService as BackgroundServiceType;
+export {
+  scheduleBackgroundProcessingAndroidTask,
+  cancelAndroidTasksById,
+  cancelAllAndroidTasks,
+  BackgroundTaskProps,
+} from './NativeBackgroundServices';

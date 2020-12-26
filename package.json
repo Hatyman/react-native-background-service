@@ -1,5 +1,5 @@
 {
-  "name": "react-native-background-service",
+  "name": "@hatyman/react-native-background-service",
   "version": "0.1.0",
   "description": "React native service to do background tasks on Android and iOS",
   "main": "lib/commonjs/index",
